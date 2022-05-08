@@ -7,17 +7,17 @@
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist "
   },
-  "author": "Diego Allience",
+  "author": "Diego ElRey",
   "license": "MIT",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.1",
-    "parcel": "^2.0.1",
-    "postcss": "^8.4.5",
-    "sass": "^1.45.1"
+    "@parcel/transformer-sass": "^2.5.0",
+    "postcss": "^8.4.13",
+    "sass": "^1.51.0"
   },
   "dependencies": {
-    "core-js": "^3.20.1",
+    "core-js": "^3.22.4",
     "fractional": "^1.0.0",
+    "parcel": "^2.5.0",
     "regenerator-runtime": "^0.13.9"
   }
 }
