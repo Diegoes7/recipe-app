@@ -89,7 +89,7 @@ const persistBookmarks = function () {
   localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
 };
 
-// Common programming pattern, when we get something get intire data
+// Common programming pattern, when we get something get entire data
 // when delete we get only ID
 export const addBookmark = function (recipe) {
   // Add bookmark

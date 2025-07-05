@@ -1,9 +1,12 @@
 .header {
   grid-area: head;
-  background-color: $color-grey-light-1;
-  display: flex;
+  background-color: $color-green-light-bg;
+  grid-area: head;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em 0;
 
   &__logo {
     margin-left: 4rem;
@@ -12,9 +15,7 @@
   }
 
   @media only screen and (max-width: 720px) {
-    flex-direction: column;
-    align-content: center;
-    justify-content:center;
+    font-size: 1em;
   }
 }
 
@@ -25,11 +26,7 @@
   align-items: center;
   padding-left: 3rem;
   transition: all 0.3s;
-  margin: 15px;
-
-  @media only screen and (max-width: 570px) {
-    margin: 5px;
-  }
+  margin: 1em;
 
   &:focus-within {
     transform: translateY(-2px);
@@ -41,8 +38,8 @@
     background: none;
     font-family: inherit;
     color: inherit;
-    font-size: 1.7rem;
     width: 30rem;
+    font-size: 1.4em;
 
     &:focus {
       outline: none;
@@ -50,20 +47,38 @@
 
     &::placeholder {
       color: $color-grey-light-3;
+      font-size: 0.9em;
     }
 
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: 1045px) {
       width: auto;
 
       &::placeholder {
-        color: white;
+        // color: white;
+        font-size: 0.8em;
       }
+    }
+
+    @media screen and (max-width: 720px) {
+      font-size: 1.5em;
     }
   }
 
   &__btn {
     font-weight: 600;
     font-family: inherit;
+
+    @media screen and (max-width: 720px) {
+      padding: 0.5em 0.7em;
+      // font-size: 12em;
+    }
+  }
+
+  @media screen and (max-width: 1045px) {
+    &__btn {
+      padding: 0.5em 1em;
+      font-size: 1.3em;
+    }
   }
 }
 
@@ -72,11 +87,11 @@
   margin-right: 2.5rem;
 
   @media only screen and (max-width: 720px) {
-      display: flex;
-      justify-content:center;
-      align-items: center;
-      padding-top: 10px;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
 
   &__list {
     list-style: none;
@@ -98,7 +113,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0 1.5rem;
+    padding: 0.7em 1.5em;
     transition: all 0.3s;
 
     display: flex;
@@ -118,26 +133,40 @@
 
     &:hover {
       background-color: $color-grey-light-2;
+      border-radius: 0.5em;
     }
   }
 }
 
 .bookmarks {
-  padding: 1rem 0;
+  padding: 1rem;
   position: absolute;
   // right: 0;
   right: -2.5rem;
   z-index: 10;
   width: 40rem;
   background-color: #fff;
+  overflow: auto;
+  max-height: 60vh;
+
   box-shadow: 0 0.8rem 5rem 2rem rgba($color-grey-dark-1, 0.1);
 
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s 0.2s;
 
+  @media only screen and (max-width: 660px) {
+    .preview__data {
+      display: grid !important;
+    }
+  }
+
   &__list {
     list-style: none;
+
+    li:not(:last-child) {
+      margin-bottom: 0.25em;
+    }
   }
 
   &__field {
@@ -158,5 +187,9 @@
   .nav__btn--bookmarks:hover + & {
     visibility: visible;
     opacity: 1;
+  }
+  @media screen and (max-width: 560px) {
+    display: flex;
+    max-width: 30em;
   }
 }

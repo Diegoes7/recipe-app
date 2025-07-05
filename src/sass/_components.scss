@@ -57,7 +57,7 @@
 
 .btn--inline {
   color: $color-primary;
-  font-size: 1.3rem;
+  font-size: 1em;
   font-weight: 600;
   border: none;
   background-color: $color-grey-light-1;
@@ -87,6 +87,11 @@
 
   &:focus {
     outline: none;
+  }
+
+  @media screen and (max-width: 660px) {
+    font-size: .9em;
+    padding: 0.5em;
   }
 }
 

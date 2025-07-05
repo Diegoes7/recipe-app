@@ -136,4 +136,4 @@ class RecipeView extends View {
 }
 
 export default new RecipeView();
-//! export just instance of the class to cobtroller, NOT entire object
+//! export just instance of the class to controller, NOT entire object

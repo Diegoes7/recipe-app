@@ -3,7 +3,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100rem;
+  width: 90%;
+  height: 65em;
+  overflow: hidden;
   background-color: white;
   border-radius: 9px;
 
@@ -24,23 +26,8 @@
     background: none;
   }
 
-  @media only screen and (max-width: 800px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70rem;
-    font-size: 2rem;
-
-    .upload__column {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-
   @media only screen and (max-width: 560px) {
-    width: 50rem;
-    font-size: 2rem;
-    align-items: stretch;
+    padding: 2rem 2rem;
   }
 }
 
@@ -65,12 +52,21 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem 6rem;
+  overflow: auto;
+  height: 95%;
+  margin-top: 3em;
+  padding-bottom: 1em;
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 
   &__column {
     display: grid;
     grid-template-columns: 1fr 2.8fr;
     align-items: center;
     gap: 1.5rem;
+    padding-right: 0.5em;
 
     @media only screen and (max-width: 560px) {
       grid-template-columns: 1fr 1fr;
@@ -89,10 +85,6 @@
       border-radius: 0.5rem;
       transition: all 0.2s;
 
-      @media only screen and (max-width: 560px) {
-        font-size: 0.7rem;
-      }
-      
       &::placeholder {
         color: $color-grey-light-3;
       }
@@ -122,5 +114,6 @@
   &__btn {
     grid-column: 1 / -1;
     justify-self: center;
+    margin-top: 2em;
   }
 }

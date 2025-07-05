@@ -8,6 +8,7 @@ $color-grey-light-2: #f2efee; // Light lines
 $color-grey-light-3: #d3c7c3; // Light text (placeholder)
 $color-grey-dark-1: #615551; // Normal text
 $color-grey-dark-2: #918581; // Lighter text
+$color-green-light-bg: #b2ede9; // Light green 
 
 $gradient: linear-gradient(to right bottom, $color-grad-1, $color-grad-2);
 
@@ -29,18 +30,11 @@ $bp-smallest: 31.25em; // 500px
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
-
-  @media only screen and (max-width: $bp-medium) {
-    font-size: 50%;
-  }
-  @media only screen and (max-width: 660px) {
-    font-size: 25%;
-  }
+  font-size: 60%;
 }
 
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: $color-grey-dark-1;
@@ -51,40 +45,32 @@ body {
 }
 
 .container {
-  max-width: 120rem;
-  min-height: 117rem;
-  margin: 4vw auto;
+  margin: 0em 1em;
+  display: grid;
+  grid-template-areas:
+    'head head'
+    'list recipe';
+
+  grid-template-columns: minmax(20rem, 1fr) minmax(30rem, 2fr);
+  grid-template-rows: auto 1fr;
+
+  max-width: 100%;
+  min-height: 100vh;
+  margin: auto;
   background-color: #fff;
   border-radius: 9px;
   overflow: hidden;
   box-shadow: 0 2rem 6rem 0.5rem rgba($color-grey-dark-1, 0.2);
+  gap: 0.5em;
 
-  display: grid;
-  grid-template-rows: 10rem minmax(100rem, auto);
-  grid-template-columns: 1fr 2fr;
-  grid-template-areas:
-    "head head"
-    "list recipe";
-
-  @media only screen and (max-width: $bp-large) {
-    max-width: 100%;
-    margin: 0;
-    border-radius: 0;
+  @media only screen and (max-width: 660px) {
+    grid-template-columns: minmax(5em, 2fr) minmax(10em, 12fr);
   }
 
-  @media only screen and (max-width: 720px) {
-    grid-template-rows: 25rem minmax(100rem, auto);
-    font-size: 50%;
-    grid-gap: 10px;
+  @media only screen and (max-width: 500px) {
+    grid-template-columns: minmax(5em, 2fr) minmax(10em, 10fr);
   }
 
-  @media only screen and (max-width: 560px) {
-    display: grid;
-    grid-template-rows: 20rem minmax(100rem, auto);
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "head head"
-      "list recipe";
-    margin-top: 5px;
-  }
+  // Optional fluid font scaling
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 1.6rem);
 }

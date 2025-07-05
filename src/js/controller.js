@@ -9,6 +9,7 @@ import 'core-js/stable';
 import 'regenerator-runtime';
 import addRecipeView from './views/addRecipeView';
 import { MODAL_CLOSE_SEC } from './config';
+import previewView from './views/previewView';
 
 // if(module.hot){
 //   module.hot.accept()
@@ -31,6 +32,7 @@ const controlRecipes = async function () {
 
     // 3. Rendering Recipe
     recipeView.render(model.state.recipe);
+    previewView._enableFloatingPreviewTooltip();
     console.log(model.state.recipe);
   } catch (err) {
     recipeView.renderError();
@@ -60,7 +62,7 @@ const controlSearchResults = async function () {
   }
 };
 
-// controler will execute when 1 of the buttons is clicked
+// controller will execute when 1 of the buttons is clicked
 const controlPagination = function (goToPage) {
   // 1. Render NEW results
   resultView.render(model.getSearchResultPage(goToPage));
@@ -69,7 +71,7 @@ const controlPagination = function (goToPage) {
   paginationView.render(model.state.search);
 };
 
-const constrolServings = function (newServings) {
+const controlServings = function (newServings) {
   // 1. Update the recipe servings (in state)
   model.updateServings(newServings);
 
@@ -105,7 +107,6 @@ const controlAddRecipe = async function (newRecipe) {
 
     // Render recipe
     recipeView.render(model.state.recipe);
-    
 
     // Success Message
     addRecipeView.renderMessage();
@@ -129,7 +130,7 @@ const controlAddRecipe = async function (newRecipe) {
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   bookmarksView.addHandlerRender(controlBookmarks);
-  recipeView.addHandlerUpdateServings(constrolServings);
+  recipeView.addHandlerUpdateServings(controlServings);
   recipeView.addHandlerAddBookmark(controlAddBookmark);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);

@@ -1,5 +1,5 @@
 // Put all the VARIABLES that should be constant and will use across all the project
-//* easily configure our project by simlply changing some of the data, that is here in this file
+//* easily configure our project by simply changing some of the data, that is here in this file
 //! define some important data about our app  - ONE CENTRAL PLACE
 
 export const API_URL = 'https://forkify-api.herokuapp.com/api/v2/recipes/';

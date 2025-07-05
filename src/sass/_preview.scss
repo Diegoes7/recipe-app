@@ -1,10 +1,15 @@
 .preview {
+  position: relative;
+  background-color: $color-green-light-bg;
+  border-bottom: 1px solid #fff;
+
   &__link {
     &:link,
     &:visited {
       display: flex;
       align-items: center;
-      padding: 1.5rem 3.25rem;
+      justify-content: center;
+      padding: 1em 0.5em 1em 0.5em;
       transition: all 0.3s;
       border-right: 1px solid #fff;
       text-decoration: none;
@@ -12,11 +17,12 @@
 
     &:hover {
       background-color: $color-grey-light-1;
-      transform: translateY(-2px);
+      transform: translateX(-4px);
     }
 
     &--active {
       background-color: $color-grey-light-1;
+      
     }
   }
 
@@ -37,12 +43,14 @@
       position: absolute;
       top: 0;
       left: 0;
-      background-image: linear-gradient(
-        to right bottom,
-        $color-grad-1,
-        $color-grad-2
-      );
+      background-image: linear-gradient(to right bottom, $color-grad-1, $color-grad-2);
       opacity: 0.4;
+    }
+
+    @media screen and (max-width: 620px) {
+      flex: 0 0 5rem;
+      height: 5rem;
+      margin-right: 0;
     }
 
     img {
@@ -57,9 +65,14 @@
   &__data {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 2rem;
+    grid-template-columns: 1fr 5rem;
     row-gap: 0.1rem;
     align-items: center;
+
+    @media only screen and (max-width: 660px) {
+      display: none;
+      padding-right: 0.5em;
+    }
   }
 
   &__title {
@@ -71,7 +84,7 @@
 
     // This is how text is truncated!
     text-overflow: ellipsis;
-    max-width: 25rem;
+    // max-width: 25rem;
     white-space: nowrap;
     overflow: hidden;
   }
@@ -101,5 +114,26 @@
       width: 1.2rem;
       fill: $color-primary;
     }
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .preview__data {
+    display: none !important;
+  }
+
+  .floating-preview {
+    display: block !important;
+  }
+}
+
+// popup data
+@media only screen and (max-width: 660px) {
+  .preview__data {
+    display: none !important;
+  }
+
+  .floating-preview {
+    display: block !important;
   }
 }
