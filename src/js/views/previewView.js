@@ -1,5 +1,5 @@
 import View from './View.js';
-import icons from 'url:../../img/icons.svg'; // Importing icons with URL loader
+import icons from 'url:../../../icons.svg'; // Importing icons with URL loader
 
 class PreviewView extends View {
   // _parentElement = '';
