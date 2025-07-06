@@ -12,6 +12,10 @@ class SearchView {
   _clearInput() {
     this._parentEl.querySelector('.search__field').value = '';
   }
+  
+  focusInput() {
+    this._searchField.focus();
+  }
 
   addHandlerSearch(handler) {
     this._searchField.addEventListener('input', () => {

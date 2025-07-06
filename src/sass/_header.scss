@@ -28,8 +28,14 @@
   transition: all 0.3s;
   margin: 1em;
 
+  // &:focus {
+  //   outline: blue 0.2rem solid;
+  // }
+
   &:focus-within {
-    transform: translateY(-2px);
+    outline: $color-primary 0.2rem solid;
+
+    transform: translateY(-1px);
     box-shadow: 0 0.7rem 3rem rgba($color-grey-dark-1, 0.08);
   }
 

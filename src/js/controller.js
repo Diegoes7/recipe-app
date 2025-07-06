@@ -128,6 +128,8 @@ const controlAddRecipe = async function (newRecipe) {
 };
 
 const init = function () {
+  searchView.focusInput();
+
   recipeView.addHandlerRender(controlRecipes);
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerUpdateServings(controlServings);
