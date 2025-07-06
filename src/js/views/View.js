@@ -1,6 +1,6 @@
 // not use/ create any instance of the class, that's why export default
 // use like parent element as other child views
-import icons from 'url:../../../icons.svg';
+import icons from 'url:../../../icons.c5b0f01c.svg';
 
 export default class View {
   _data;
