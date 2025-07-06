@@ -72,6 +72,11 @@
       padding: 0.5em 0.7em;
       // font-size: 12em;
     }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
   }
 
   @media screen and (max-width: 1045px) {

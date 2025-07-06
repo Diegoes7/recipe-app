@@ -1,5 +1,7 @@
 class SearchView {
   _parentEl = document.querySelector('.search');
+  _searchField = document.querySelector('.search__field');
+  _searchButton = document.querySelector('.search__btn');
 
   getQuery() {
     const query = this._parentEl.querySelector('.search__field').value;
@@ -12,8 +14,23 @@ class SearchView {
   }
 
   addHandlerSearch(handler) {
-    this._parentEl.addEventListener('submit', function (e) {
+    this._searchField.addEventListener('input', () => {
+      if (this._searchField.value.trim() !== '') {
+        this._searchButton.disabled = false;
+      } else {
+        this._searchButton.disabled = true;
+      }
+    });
+
+    this._parentEl.addEventListener('submit', e => {
       e.preventDefault();
+
+      if (this._searchField.value === '') {
+        this._searchButton.disabled = true;
+      } else {
+        this._searchButton.disabled = false;
+      }
+
       handler();
     });
   }
