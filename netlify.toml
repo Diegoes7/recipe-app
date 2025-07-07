@@ -1,9 +1,6 @@
 [build]
-  command = "parcel build index.html --dist-dir dist --public-url ./"
+  command = "parcel build index.html"
   publish = "dist"
-  
-[build.environment]
-  NODE_VERSION = "18"
 
 [[headers]]
   for = "/*"
