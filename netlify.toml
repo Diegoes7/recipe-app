@@ -1,5 +1,5 @@
 [build]
-  command = "parcel build index.html --dist-dir dist"
+  command = "parcel build index.html --dist-dir dist --public-url ./"
   publish = "dist"
   
 [build.environment]
@@ -10,3 +10,8 @@
   [headers.values]
     Access-Control-Allow-Origin = "*"
     Access-Control-Allow-Methods = "GET"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

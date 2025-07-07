@@ -5,13 +5,14 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir dist"
+    "build": "parcel build index.html --dist-dir dist --public-url ./"
   },
   "author": "Diego ElRey",
   "license": "MIT",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.10.0",
+    "@parcel/transformer-sass": "^2.15.4",
     "parcel": "^2.15.4",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "postcss": "^8.4.38",
     "sass": "^1.77.5"
   },
