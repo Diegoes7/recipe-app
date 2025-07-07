@@ -10,7 +10,7 @@
   "author": "Diego ElRey",
   "license": "MIT",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.15.4",
+    "@parcel/transformer-sass": "^2.10.0",
     "parcel-reporter-static-files-copy": "^1.5.3",
     "postcss": "^8.4.38",
     "sass": "^1.77.5"
@@ -22,12 +22,8 @@
     "@parcel/transformer-babel": "^2.15.4",
     "core-js": "^3.37.0",
     "fracty": "^1.0.11",
-    "parcel": "2.15.4",
+    "parcel": "^2.10.0",
     "regenerator-runtime": "^0.14.1"
-  },
-  "staticFiles": {
-    "staticPath": "./src",
-    "watcherGlob": "img/**/*"
   },
   "browser": {
     "path": false,
