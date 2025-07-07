@@ -1,7 +1,8 @@
 // not use/ create any instance of the class, that's why export default
 // use like parent element as other child views
 // import icons from 'url:../../icons.svg';
-const icons = new URL('../../img/icons.svg', import.meta.url).href;
+// const icons = new URL('../../img/icons.svg', import.meta.url).href;
+import icons from 'url:./icons.svg';
 
 
 export default class View {
