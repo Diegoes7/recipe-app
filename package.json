@@ -11,6 +11,7 @@
   "license": "MIT",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.15.4",
+    "parcel-reporter-static-files-copy": "^1.5.3",
     "postcss": "^8.4.38",
     "sass": "^1.77.5"
   },
@@ -23,6 +24,10 @@
     "fracty": "^1.0.11",
     "parcel": "2.15.4",
     "regenerator-runtime": "^0.14.1"
+  },
+  "staticFiles": {
+    "staticPath": "./src",
+    "watcherGlob": "**/icons.svg"
   },
   "browser": {
     "path": false,
