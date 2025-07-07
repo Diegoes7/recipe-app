@@ -1,6 +1,6 @@
 // not use/ create any instance of the class, that's why export default
 // use like parent element as other child views
-const icons = new URL('../../img/icons.svg', import.meta.url).href;
+import icons from 'url:../../img/icons.svg';
 
 export default class View {
   _data;
@@ -14,7 +14,7 @@ export default class View {
    * @author Diego
    * @todo Finish the implementation
    */
-
+  
   render(data, render = true) {
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();

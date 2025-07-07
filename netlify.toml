@@ -1,5 +1,5 @@
 [build]
-   command = "parcel build index.html --dist-dir dist --public-url ./"
+   command = "parcel build index.html --dist-dir / --public-url ./"
    publish = "dist"
   
 [build.environment]

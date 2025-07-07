@@ -1,5 +1,6 @@
 import View from './View.js';
-const icons = new URL('./img/icons.svg', import.meta.url).href;
+import icons from 'url:../../img/icons.svg';
+
 
 class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
