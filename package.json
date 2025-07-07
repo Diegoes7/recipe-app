@@ -27,7 +27,7 @@
   },
   "staticFiles": {
     "staticPath": "./src",
-    "watcherGlob": "**/icons.svg"
+    "watcherGlob": "img/**/*"
   },
   "browser": {
     "path": false,
