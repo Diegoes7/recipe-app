@@ -1,5 +1,5 @@
 [build]
-   command = "npm run build"
+   command = "parcel build index.html --dist-dir dist --public-url ./"
    publish = "dist"
   
 [build.environment]
