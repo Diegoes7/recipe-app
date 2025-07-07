@@ -1,9 +1,4 @@
 [build]
-  command = "parcel build index.html"
+  command = "parcel build index.html --dist-dir dist"
   publish = "dist"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Access-Control-Allow-Methods = "GET"
+  
