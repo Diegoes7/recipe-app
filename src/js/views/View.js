@@ -2,8 +2,7 @@
 // use like parent element as other child views
 // import icons from 'url:../../icons.svg';
 // const icons = new URL('../../img/icons.svg', import.meta.url).href;
-import icons from 'url:./icons.svg';
-
+import icons from 'url:../../../icons.svg';
 
 export default class View {
   _data;
@@ -17,7 +16,7 @@ export default class View {
    * @author Diego
    * @todo Finish the implementation
    */
-  
+
   render(data, render = true) {
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
