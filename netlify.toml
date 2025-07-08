@@ -6,10 +6,10 @@
   NODE_VERSION = "18"
 
 [[headers]]
-  for = "/*"
+  for = "/assets/*"
   [headers.values]
-    Access-Control-Allow-Origin = "*"
-    Access-Control-Allow-Methods = "GET"
+    Content-Type = "image/svg+xml"
+
 
 [[redirects]]
   from = "/*"
