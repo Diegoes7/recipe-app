@@ -6,7 +6,7 @@
   NODE_VERSION = "18"
 
 [[headers]]
-  for = "/src/img/*.svg"
+  for = "/*.svg"
   [headers.values]
     Content-Type = "image/svg+xml"
 
