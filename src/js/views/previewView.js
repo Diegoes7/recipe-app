@@ -1,5 +1,5 @@
 import View from './View.js';
-import icons from 'url:../../img/icons.svg';
+import icons from 'url:./icons.svg';
 
 class PreviewView extends View {
   // _parentElement = '';
@@ -47,7 +47,7 @@ class PreviewView extends View {
       const rect = link.getBoundingClientRect();
       clone.style.position = 'absolute';
       clone.style.top = `${window.scrollY + rect.top}px`;
-      clone.style.left = `${window.scrollX + rect.right -15}px`;
+      clone.style.left = `${window.scrollX + rect.right - 15}px`;
       clone.style.zIndex = '9999';
       clone.style.background = '#fff';
       clone.style.padding = '0.75rem';
