@@ -1,12 +1,12 @@
 [build]
-  command = "parcel build index.html --dist-dir dist --public-url ./"
+  command = "parcel build index.html --dist-dir --no-content-hash dist --public-url ./"
   publish = "dist"
   
 [build.environment]
   NODE_VERSION = "18"
 
 [[headers]]
-  for = "/assets/*"
+  for = "/src/img/*.svg"
   [headers.values]
     Content-Type = "image/svg+xml"
 
