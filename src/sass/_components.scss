@@ -25,13 +25,13 @@
 .btn {
   @extend %btn;
 
-  padding: 1.5rem 4rem;
+  padding: 1.5rem 3rem;
   font-size: 1.5rem;
   font-weight: 600;
 
   svg {
-    height: 2.25rem;
-    width: 2.25rem;
+    width: 3.25rem;
+    height: 3.25rem;
     fill: currentColor;
   }
 }
@@ -90,7 +90,7 @@
   }
 
   @media screen and (max-width: 660px) {
-    font-size: .9em;
+    font-size: 0.9em;
     padding: 0.5em;
   }
 }
@@ -203,8 +203,8 @@
   display: flex;
 
   svg {
-    height: 3rem;
-    width: 3rem;
+    width: 4rem;
+    height: 5rem;
     fill: $color-primary;
     transform: translateY(-0.3rem);
   }

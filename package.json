@@ -23,7 +23,8 @@
     "@parcel/transformer-babel": "^2.15.4",
     "core-js": "^3.37.0",
     "fracty": "^1.0.11",
-    "regenerator-runtime": "^0.14.1"
+    "regenerator-runtime": "^0.14.1",
+    "simple-icons": "^15.5.0"
   },
   "browser": {
     "path": false,

@@ -10,7 +10,8 @@ class SearchView {
   }
 
   _clearInput() {
-    this._parentEl.querySelector('.search__field').value = '';
+    this._searchField.value = '';
+    this._searchButton.disabled = true; 
   }
   
   focusInput() {

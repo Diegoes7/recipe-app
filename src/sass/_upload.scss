@@ -4,7 +4,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  height: 65em;
+  height: 70em;
   overflow: hidden;
   background-color: white;
   border-radius: 9px;
@@ -52,8 +52,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem 6rem;
-  overflow: auto;
-  height: 95%;
+  overflow: hidden auto;
+  height: 100%;
   margin-top: 3em;
   padding-bottom: 1em;
 
@@ -114,6 +114,7 @@
   &__btn {
     grid-column: 1 / -1;
     justify-self: center;
-    margin-top: 2em;
+    margin: 2em 0 1em 0;
+    height: 3em;
   }
 }

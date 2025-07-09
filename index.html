@@ -28,9 +28,18 @@
             placeholder="Search over 1,000,000 recipes..."
           />
           <button class="btn search__btn" disabled>
-            <svg class="search__icon">
-              <!-- <use href="./src/img/icons.svg#icon-search"></use> -->
-              <use href="./public/icons.svg#icon-search"></use>
+            <!-- <svg class="search__icon">
+              <use href="icons.svg#icon-search"></use>
+            </svg> -->
+            <svg
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>SearXNG</title>
+              <path
+                d="m13.716 17.261 6.873 6.582L24 20.282l-6.824-6.536a9.11 9.11 0 0 0 1.143-4.43c0-5.055-4.105-9.159-9.16-9.159S0 4.261 0 9.316c0 5.055 4.104 9.159 9.159 9.159a9.11 9.11 0 0 0 4.557-1.214ZM9.159 2.773a6.546 6.546 0 0 1 6.543 6.543 6.545 6.545 0 0 1-6.543 6.542 6.545 6.545 0 0 1-6.542-6.542 6.545 6.545 0 0 1 6.542-6.543ZM7.26 5.713a4.065 4.065 0 0 1 4.744.747 4.064 4.064 0 0 1 .707 4.749l1.157.611a5.376 5.376 0 0 0-.935-6.282 5.377 5.377 0 0 0-6.274-.987l.601 1.162Z"
+              />
             </svg>
             <span>Search</span>
           </button>
@@ -40,27 +49,39 @@
           <ul class="nav__list">
             <li class="nav__item">
               <button class="nav__btn nav__btn--add-recipe">
-                <svg class="nav__icon">
-                  <use href="./public/icons.svg#icon-edit"></use>
+                <!-- <svg class="nav__icon">
+                  <use href="./src/img/icons.svg#icon-edit"></use>
+                </svg> -->
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Add Recipe</title>
+                  <path
+                    d="M6 0C2.689 0 0 2.689 0 6v12c0 3.311 2.689 6 6 6h12c3.311 0 6-2.689 6-6V6c0-3.311-2.689-6-6-6H6zm.227 1.871h11.546A3.98 3.98 0 0 1 21.75 5.85v11.545a3.978 3.978 0 0 1-3.977 3.976H6.227a3.978 3.978 0 0 1-3.977-3.976V5.85a3.98 3.98 0 0 1 3.977-3.98zm-.223 2.31V6.01H4.633V7.7h1.37v1.903h-1.37v1.689h1.37v1.828h1.4v-1.828h1.695v1.828h1.398v-1.828h1.371v-1.69h-1.37v-1.9h1.37V6.01h-1.37V4.182h-1.4V6.01H7.403V4.182H6.004zm1.398 3.52h1.696v1.903H7.402V7.7z"
+                  />
                 </svg>
                 <span>Add recipe</span>
               </button>
             </li>
             <li class="nav__item">
               <button class="nav__btn nav__btn--bookmarks">
-                <svg class="nav__icon">
-                  <use href="./public/icons.svg#icon-bookmark"></use>
+                <svg
+                  role="img"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Git LFS</title>
+                  <path
+                    d="M11.967.304L0 7.215v9.68l11.79 6.802V14.02l11.96-6.91-4.383-2.53-11.959 6.905v3.887l-2.775-1.601V9.886l11.965-6.91zM24 7.545L12.29 14.31v9.387L24 16.929V7.547z"
+                  />
                 </svg>
                 <span>Bookmarks</span>
               </button>
               <div class="bookmarks">
                 <ul class="bookmarks__list">
                   <div class="message">
-                    <div>
-                      <svg>
-                        <use href="./public/icons.svg#icon-smile"></use>
-                      </svg>
-                    </div>
                     <p>
                       No bookmarks yet. Find a nice recipe and bookmark it :)
                     </p>
@@ -127,8 +148,20 @@
       <div class="recipe">
         <div class="message">
           <div>
-            <svg>
-              <use href="./public/icons.svg#icon-smile"></use>
+            <!-- <svg>
+              <use href="./src/img/icons.svg#icon-smile"></use>
+            </svg> -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="48px"
+              viewBox="0 0 24 24"
+              width="48px"
+              fill="#e3ee3"
+            >
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path
+                d="M12 5.99L19.53 19H4.47L12 5.99M12 2L1 21h22L12 2zm1 14h-2v2h2v-2zm0-6h-2v4h2v-4z"
+              />
             </svg>
           </div>
           <p>Start by searching for a recipe or an ingredient. Have fun!</p>
@@ -323,8 +356,17 @@
         </div>
 
         <button class="btn upload__btn">
-          <svg>
-            <use href="./public/icons.svg#icon-upload-cloud"></use>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="48px"
+            viewBox="0 0 24 24"
+            width="48px"
+            fill="#D16D6A"
+          >
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path
+              d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3zM8 13h2.55v3h2.9v-3H16l-4-4z"
+            />
           </svg>
           <span>Upload</span>
         </button>
